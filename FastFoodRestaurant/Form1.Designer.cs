@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
+            Closelbl = new Label();
             Datelbl = new Label();
             label1 = new Label();
             panel3 = new Panel();
@@ -88,8 +89,21 @@
             pictureBox6 = new PictureBox();
             label9 = new Label();
             SaladTb = new TextBox();
-            BurgerCb = new CheckBox();
             panel2 = new Panel();
+            BurgerCb = new CheckBox();
+            panel7 = new Panel();
+            button3 = new Button();
+            button2 = new Button();
+            GrdTotallbl = new Label();
+            Taxlbl = new Label();
+            SubTotallbl = new Label();
+            button1 = new Button();
+            label19 = new Label();
+            label18 = new Label();
+            label17 = new Label();
+            ReceiptTb = new RichTextBox();
+            printDocument1 = new System.Drawing.Printing.PrintDocument();
+            printPreviewDialog1 = new PrintPreviewDialog();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -106,11 +120,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             panel2.SuspendLayout();
+            panel7.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.PapayaWhip;
+            panel1.Controls.Add(Closelbl);
             panel1.Controls.Add(Datelbl);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
@@ -118,6 +134,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1528, 144);
             panel1.TabIndex = 0;
+            // 
+            // Closelbl
+            // 
+            Closelbl.AutoSize = true;
+            Closelbl.Font = new Font("Arial Rounded MT Bold", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Closelbl.ForeColor = Color.ForestGreen;
+            Closelbl.Location = new Point(1472, 9);
+            Closelbl.Name = "Closelbl";
+            Closelbl.Size = new Size(31, 32);
+            Closelbl.TabIndex = 6;
+            Closelbl.Text = "X";
+            Closelbl.Click += Closelbl_Click;
             // 
             // Datelbl
             // 
@@ -431,11 +459,12 @@
             // CoffeeCb
             // 
             CoffeeCb.AutoSize = true;
+            CoffeeCb.BackColor = Color.Transparent;
             CoffeeCb.Location = new Point(8, 95);
             CoffeeCb.Name = "CoffeeCb";
             CoffeeCb.Size = new Size(18, 17);
             CoffeeCb.TabIndex = 28;
-            CoffeeCb.UseVisualStyleBackColor = true;
+            CoffeeCb.UseVisualStyleBackColor = false;
             CoffeeCb.CheckedChanged += CoffeeCb_CheckedChanged;
             // 
             // label3
@@ -520,7 +549,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.OrangeRed;
-            label4.Location = new Point(135, 101);
+            label4.Location = new Point(135, 102);
             label4.Name = "label4";
             label4.Size = new Size(79, 23);
             label4.TabIndex = 6;
@@ -529,8 +558,10 @@
             // 
             // BurgerTb
             // 
+            BurgerTb.BackColor = SystemColors.Window;
+            BurgerTb.Enabled = false;
             BurgerTb.Font = new Font("Microsoft New Tai Lue", 10.8F, FontStyle.Bold);
-            BurgerTb.Location = new Point(220, 89);
+            BurgerTb.Location = new Point(248, 88);
             BurgerTb.Multiline = true;
             BurgerTb.Name = "BurgerTb";
             BurgerTb.Size = new Size(61, 55);
@@ -542,11 +573,12 @@
             // Burger2Cb
             // 
             Burger2Cb.AutoSize = true;
+            Burger2Cb.BackColor = Color.Transparent;
             Burger2Cb.Location = new Point(33, 205);
             Burger2Cb.Name = "Burger2Cb";
             Burger2Cb.Size = new Size(18, 17);
             Burger2Cb.TabIndex = 8;
-            Burger2Cb.UseVisualStyleBackColor = true;
+            Burger2Cb.UseVisualStyleBackColor = false;
             Burger2Cb.CheckedChanged += Burger2Cb_CheckedChanged;
             // 
             // pictureBox2
@@ -564,7 +596,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.OrangeRed;
-            label5.Location = new Point(135, 199);
+            label5.Location = new Point(135, 205);
             label5.Name = "label5";
             label5.Size = new Size(91, 23);
             label5.TabIndex = 10;
@@ -572,8 +604,9 @@
             // 
             // Burger2Tb
             // 
+            Burger2Tb.Enabled = false;
             Burger2Tb.Font = new Font("Microsoft New Tai Lue", 10.8F, FontStyle.Bold);
-            Burger2Tb.Location = new Point(220, 187);
+            Burger2Tb.Location = new Point(248, 187);
             Burger2Tb.Multiline = true;
             Burger2Tb.Name = "Burger2Tb";
             Burger2Tb.Size = new Size(61, 55);
@@ -584,11 +617,12 @@
             // Burger3Cb
             // 
             Burger3Cb.AutoSize = true;
+            Burger3Cb.BackColor = Color.Transparent;
             Burger3Cb.Location = new Point(33, 308);
             Burger3Cb.Name = "Burger3Cb";
             Burger3Cb.Size = new Size(18, 17);
             Burger3Cb.TabIndex = 12;
-            Burger3Cb.UseVisualStyleBackColor = true;
+            Burger3Cb.UseVisualStyleBackColor = false;
             Burger3Cb.CheckedChanged += Burger3Cb_CheckedChanged;
             // 
             // pictureBox3
@@ -614,8 +648,9 @@
             // 
             // Burger3Tb
             // 
+            Burger3Tb.Enabled = false;
             Burger3Tb.Font = new Font("Microsoft New Tai Lue", 10.8F, FontStyle.Bold);
-            Burger3Tb.Location = new Point(220, 290);
+            Burger3Tb.Location = new Point(248, 289);
             Burger3Tb.Multiline = true;
             Burger3Tb.Name = "Burger3Tb";
             Burger3Tb.Size = new Size(61, 55);
@@ -626,11 +661,12 @@
             // HotdogCb
             // 
             HotdogCb.AutoSize = true;
+            HotdogCb.BackColor = Color.Transparent;
             HotdogCb.Location = new Point(33, 409);
             HotdogCb.Name = "HotdogCb";
             HotdogCb.Size = new Size(18, 17);
             HotdogCb.TabIndex = 16;
-            HotdogCb.UseVisualStyleBackColor = true;
+            HotdogCb.UseVisualStyleBackColor = false;
             HotdogCb.CheckedChanged += HotdogCb_CheckedChanged;
             // 
             // pictureBox4
@@ -657,8 +693,9 @@
             // 
             // HotdogTb
             // 
+            HotdogTb.Enabled = false;
             HotdogTb.Font = new Font("Microsoft New Tai Lue", 10.8F, FontStyle.Bold);
-            HotdogTb.Location = new Point(220, 391);
+            HotdogTb.Location = new Point(248, 391);
             HotdogTb.Multiline = true;
             HotdogTb.Name = "HotdogTb";
             HotdogTb.Size = new Size(61, 55);
@@ -669,11 +706,12 @@
             // FriesCb
             // 
             FriesCb.AutoSize = true;
+            FriesCb.BackColor = Color.Transparent;
             FriesCb.Location = new Point(33, 509);
             FriesCb.Name = "FriesCb";
             FriesCb.Size = new Size(18, 17);
             FriesCb.TabIndex = 20;
-            FriesCb.UseVisualStyleBackColor = true;
+            FriesCb.UseVisualStyleBackColor = false;
             FriesCb.CheckedChanged += FriesCb_CheckedChanged;
             // 
             // pictureBox5
@@ -691,7 +729,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label8.ForeColor = Color.OrangeRed;
-            label8.Location = new Point(135, 509);
+            label8.Location = new Point(135, 503);
             label8.Name = "label8";
             label8.Size = new Size(59, 23);
             label8.TabIndex = 22;
@@ -699,8 +737,9 @@
             // 
             // FriesTb
             // 
+            FriesTb.Enabled = false;
             FriesTb.Font = new Font("Microsoft New Tai Lue", 10.8F, FontStyle.Bold);
-            FriesTb.Location = new Point(220, 491);
+            FriesTb.Location = new Point(248, 496);
             FriesTb.Multiline = true;
             FriesTb.Name = "FriesTb";
             FriesTb.Size = new Size(61, 55);
@@ -711,11 +750,12 @@
             // SaladCb
             // 
             SaladCb.AutoSize = true;
+            SaladCb.BackColor = Color.Transparent;
             SaladCb.Location = new Point(33, 611);
             SaladCb.Name = "SaladCb";
             SaladCb.Size = new Size(18, 17);
             SaladCb.TabIndex = 24;
-            SaladCb.UseVisualStyleBackColor = true;
+            SaladCb.UseVisualStyleBackColor = false;
             SaladCb.CheckedChanged += SaladCb_CheckedChanged;
             // 
             // pictureBox6
@@ -741,8 +781,9 @@
             // 
             // SaladTb
             // 
+            SaladTb.Enabled = false;
             SaladTb.Font = new Font("Microsoft New Tai Lue", 10.8F, FontStyle.Bold);
-            SaladTb.Location = new Point(220, 593);
+            SaladTb.Location = new Point(248, 592);
             SaladTb.Multiline = true;
             SaladTb.Name = "SaladTb";
             SaladTb.Size = new Size(61, 55);
@@ -750,18 +791,10 @@
             SaladTb.Text = "0";
             SaladTb.TextAlign = HorizontalAlignment.Center;
             // 
-            // BurgerCb
-            // 
-            BurgerCb.AutoSize = true;
-            BurgerCb.Location = new Point(33, 108);
-            BurgerCb.Name = "BurgerCb";
-            BurgerCb.Size = new Size(18, 17);
-            BurgerCb.TabIndex = 4;
-            BurgerCb.UseVisualStyleBackColor = true;
-            BurgerCb.CheckedChanged += BurgerCb_CheckedChanged_1;
-            // 
             // panel2
             // 
+            panel2.BackColor = Color.Transparent;
+            panel2.Controls.Add(BurgerTb);
             panel2.Controls.Add(BurgerCb);
             panel2.Controls.Add(SaladTb);
             panel2.Controls.Add(label9);
@@ -783,23 +816,189 @@
             panel2.Controls.Add(label5);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(Burger2Cb);
-            panel2.Controls.Add(BurgerTb);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(panel4);
             panel2.Dock = DockStyle.Left;
-            panel2.Enabled = false;
             panel2.Location = new Point(0, 144);
             panel2.Name = "panel2";
             panel2.Size = new Size(393, 710);
             panel2.TabIndex = 1;
+            // 
+            // BurgerCb
+            // 
+            BurgerCb.AutoSize = true;
+            BurgerCb.Location = new Point(33, 108);
+            BurgerCb.Name = "BurgerCb";
+            BurgerCb.Size = new Size(18, 17);
+            BurgerCb.TabIndex = 6;
+            BurgerCb.UseVisualStyleBackColor = true;
+            BurgerCb.CheckedChanged += BurgerCb_CheckedChanged;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(button3);
+            panel7.Controls.Add(button2);
+            panel7.Controls.Add(GrdTotallbl);
+            panel7.Controls.Add(Taxlbl);
+            panel7.Controls.Add(SubTotallbl);
+            panel7.Controls.Add(button1);
+            panel7.Controls.Add(label19);
+            panel7.Controls.Add(label18);
+            panel7.Controls.Add(label17);
+            panel7.Dock = DockStyle.Bottom;
+            panel7.Location = new Point(393, 673);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(742, 181);
+            panel7.TabIndex = 4;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Khaki;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button3.ForeColor = Color.Green;
+            button3.Location = new Point(576, 117);
+            button3.Name = "button3";
+            button3.Size = new Size(94, 34);
+            button3.TabIndex = 23;
+            button3.Text = "PRINT";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.Khaki;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.Green;
+            button2.Location = new Point(325, 117);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 34);
+            button2.TabIndex = 22;
+            button2.Text = "ADD";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
+            // GrdTotallbl
+            // 
+            GrdTotallbl.AutoSize = true;
+            GrdTotallbl.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            GrdTotallbl.ForeColor = SystemColors.ActiveCaptionText;
+            GrdTotallbl.Location = new Point(621, 64);
+            GrdTotallbl.Name = "GrdTotallbl";
+            GrdTotallbl.Size = new Size(48, 23);
+            GrdTotallbl.TabIndex = 21;
+            GrdTotallbl.Text = "$//--";
+            // 
+            // Taxlbl
+            // 
+            Taxlbl.AutoSize = true;
+            Taxlbl.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Taxlbl.ForeColor = SystemColors.ActiveCaptionText;
+            Taxlbl.Location = new Point(367, 65);
+            Taxlbl.Name = "Taxlbl";
+            Taxlbl.Size = new Size(48, 23);
+            Taxlbl.TabIndex = 20;
+            Taxlbl.Text = "$//--";
+            Taxlbl.Click += Taxlbl_Click;
+            // 
+            // SubTotallbl
+            // 
+            SubTotallbl.AutoSize = true;
+            SubTotallbl.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SubTotallbl.ForeColor = SystemColors.ActiveCaptionText;
+            SubTotallbl.Location = new Point(103, 65);
+            SubTotallbl.Name = "SubTotallbl";
+            SubTotallbl.Size = new Size(48, 23);
+            SubTotallbl.TabIndex = 19;
+            SubTotallbl.Text = "$//--";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Khaki;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.Green;
+            button1.Location = new Point(30, 117);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 34);
+            button1.TabIndex = 18;
+            button1.Text = "RESET";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label19.ForeColor = Color.OrangeRed;
+            label19.Location = new Point(556, 64);
+            label19.Name = "label19";
+            label19.Size = new Size(59, 23);
+            label19.TabIndex = 17;
+            label19.Text = "Total";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label18.ForeColor = Color.OrangeRed;
+            label18.Location = new Point(316, 64);
+            label18.Name = "label18";
+            label18.Size = new Size(45, 23);
+            label18.TabIndex = 16;
+            label18.Text = "Tax";
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label17.ForeColor = Color.OrangeRed;
+            label17.Location = new Point(0, 64);
+            label17.Name = "label17";
+            label17.Size = new Size(97, 23);
+            label17.TabIndex = 15;
+            label17.Text = "SubTotal";
+            // 
+            // ReceiptTb
+            // 
+            ReceiptTb.BorderStyle = BorderStyle.None;
+            ReceiptTb.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ReceiptTb.Location = new Point(393, 205);
+            ReceiptTb.Name = "ReceiptTb";
+            ReceiptTb.Size = new Size(742, 471);
+            ReceiptTb.TabIndex = 5;
+            ReceiptTb.Text = "";
+            ReceiptTb.TextChanged += ReceiptTb_TextChanged;
+            // 
+            // printDocument1
+            // 
+            printDocument1.PrintPage += printDocument1_PrintPage;
+            // 
+            // printPreviewDialog1
+            // 
+            printPreviewDialog1.AutoScrollMargin = new Size(0, 0);
+            printPreviewDialog1.AutoScrollMinSize = new Size(0, 0);
+            printPreviewDialog1.ClientSize = new Size(400, 300);
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.Enabled = true;
+            printPreviewDialog1.Icon = (Icon)resources.GetObject("printPreviewDialog1.Icon");
+            printPreviewDialog1.Name = "printPreviewDialog1";
+            printPreviewDialog1.Visible = false;
+            printPreviewDialog1.Load += printPreviewDialog1_Load;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1528, 854);
+            Controls.Add(ReceiptTb);
+            Controls.Add(panel7);
             Controls.Add(panel6);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -828,6 +1027,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -891,7 +1092,21 @@
         private PictureBox pictureBox6;
         private Label label9;
         private TextBox SaladTb;
-        private CheckBox BurgerCb;
         private Panel panel2;
+        private Label Closelbl;
+        private Panel panel7;
+        private Label label17;
+        private Label label18;
+        private Label label19;
+        private Label GrdTotallbl;
+        private Label Taxlbl;
+        private Label SubTotallbl;
+        private Button button1;
+        private Button button3;
+        private Button button2;
+        private RichTextBox ReceiptTb;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private PrintPreviewDialog printPreviewDialog1;
+        private CheckBox BurgerCb;
     }
 }
