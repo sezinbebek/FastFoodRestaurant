@@ -14,7 +14,8 @@ namespace FastFoodRestaurant
             Application.Run(new Form1());
 
             Console.WriteLine("Hello world!");
-            
+            Console.WriteLine("Hello world 2!");
+
 
         }
     }
