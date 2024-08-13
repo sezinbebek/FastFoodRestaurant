@@ -68,7 +68,6 @@
             label2 = new Label();
             pictureBox1 = new PictureBox();
             label4 = new Label();
-            BurgerTb = new TextBox();
             Burger2Cb = new CheckBox();
             pictureBox2 = new PictureBox();
             label5 = new Label();
@@ -104,6 +103,7 @@
             ReceiptTb = new RichTextBox();
             printDocument1 = new System.Drawing.Printing.PrintDocument();
             printPreviewDialog1 = new PrintPreviewDialog();
+            BurgerTb = new TextBox();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
@@ -556,20 +556,6 @@
             label4.Text = "Burger";
             label4.Click += label4_Click;
             // 
-            // BurgerTb
-            // 
-            BurgerTb.BackColor = SystemColors.Window;
-            BurgerTb.Enabled = false;
-            BurgerTb.Font = new Font("Microsoft New Tai Lue", 10.8F, FontStyle.Bold);
-            BurgerTb.Location = new Point(248, 88);
-            BurgerTb.Multiline = true;
-            BurgerTb.Name = "BurgerTb";
-            BurgerTb.Size = new Size(61, 55);
-            BurgerTb.TabIndex = 7;
-            BurgerTb.Text = "0";
-            BurgerTb.TextAlign = HorizontalAlignment.Center;
-            BurgerTb.TextChanged += BurgerTb_TextChanged;
-            // 
             // Burger2Cb
             // 
             Burger2Cb.AutoSize = true;
@@ -992,6 +978,19 @@
             printPreviewDialog1.Visible = false;
             printPreviewDialog1.Load += printPreviewDialog1_Load;
             // 
+            // BurgerTb
+            // 
+            BurgerTb.Enabled = false;
+            BurgerTb.Font = new Font("Microsoft New Tai Lue", 10.8F, FontStyle.Bold);
+            BurgerTb.Location = new Point(248, 77);
+            BurgerTb.Multiline = true;
+            BurgerTb.Name = "BurgerTb";
+            BurgerTb.Size = new Size(61, 55);
+            BurgerTb.TabIndex = 28;
+            BurgerTb.Text = "0";
+            BurgerTb.TextAlign = HorizontalAlignment.Center;
+            BurgerTb.TextChanged += textBox1_TextChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -1071,7 +1070,6 @@
         private Label label2;
         private PictureBox pictureBox1;
         private Label label4;
-        private TextBox BurgerTb;
         private CheckBox Burger2Cb;
         private PictureBox pictureBox2;
         private Label label5;
@@ -1108,5 +1106,6 @@
         private System.Drawing.Printing.PrintDocument printDocument1;
         private PrintPreviewDialog printPreviewDialog1;
         private CheckBox BurgerCb;
+        private TextBox BurgerTb;
     }
 }

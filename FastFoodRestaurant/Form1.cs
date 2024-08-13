@@ -223,13 +223,13 @@ namespace FastFoodRestaurant
 
         private void label4_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void BurgerTb_TextChanged(object sender, EventArgs e)
         {
-            BurgerTb.Enabled = true;
-            BurgerTb.BackColor = Color.Transparent;
+            //BurgerTb.Enabled = true;
+            //BurgerTb.BackColor = Color.Transparent;
         }
 
 
@@ -412,6 +412,11 @@ namespace FastFoodRestaurant
                 BurgerTb.Enabled = false;
                 BurgerTb.Text = "0";
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
