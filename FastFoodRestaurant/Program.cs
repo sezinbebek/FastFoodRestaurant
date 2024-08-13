@@ -1,3 +1,5 @@
+using FastFoodRestaurant.Service;
+
 namespace FastFoodRestaurant
 {
     internal static class Program
@@ -19,4 +21,5 @@ namespace FastFoodRestaurant
 
         }
     }
+     <IService,Service>();
 }
